@@ -56,7 +56,7 @@ class TransportEnquirySystem {
 
 class Arshad {
     public static void main(String[] args) {
-        TransportEnquirySystem enquirySystem = new TransportEnquirySystem();
+        TransportEnquirySystem1 enquirySystem = new TransportEnquirySystem1();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Transport Enquiry System!");
