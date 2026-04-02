@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 public class DeleteQuery {
     public static void main(String[] args) throws ClassNotFoundException{
         String url = "jdbc:mysql://localhost:3306/Student";
