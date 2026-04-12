@@ -9,5 +9,6 @@ public class SumOfArray {
         }
 
         System.out.println("Sum of array: " + sum);
+        System.out.println("Average of array: " + (sum / (double) arr.length));
     }
 }
