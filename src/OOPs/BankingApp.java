@@ -18,6 +18,7 @@ abstract class BankAccount {
     public void checkBalance() {
         System.out.println(accountHolder + "'s Balance: " + balance);
     }
+
 }
 
 // Savings Account
