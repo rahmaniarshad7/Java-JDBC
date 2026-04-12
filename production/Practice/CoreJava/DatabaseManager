@@ -1,0 +1,71 @@
+
+CREATE TABLE routes (
+    id INTEGER PRIMARY KEY,
+    start_point TEXT,
+    destination TEXT
+);
+
+CREATE TABLE transports (
+    id INTEGER PRIMARY KEY,
+    route_id INTEGER,
+    type TEXT,
+    departure_time TEXT,
+    arrival_time TEXT,
+    price REAL,
+    FOREIGN KEY (route_id) REFERENCES routes(id)
+);
+
+
+
+
+
+import java.sql.*;
+
+public class DatabaseManager {
+    private Connection connection;
+
+    public DatabaseManager(String url) throws SQLException {
+        this.connection = DriverManager.getConnection(url);
+    }
+
+    public void close() throws SQLException {
+        if (connection != null) {
+            connection.close();
+        }
+    }
+
+    public ResultSet executeQuery(String query) throws SQLException {
+        Statement statement = connection.createStatement();
+        return statement.executeQuery(query);
+    }
+
+    public void executeUpdate(String query) throws SQLException {
+        Statement statement = connection.createStatement();
+        statement.executeUpdate(query);
+    }
+}
+
+public class LambdaExpression {
+    public static void main(String[] args) {
+        String url = "jdbc:sqlite:transport.db";
+        try {
+            DatabaseManager dbManager = new DatabaseManager(url);
+
+            // Example: Inserting data into the database
+            dbManager.executeUpdate("INSERT INTO routes (start_point, destination) VALUES ('City A', 'City B')");
+            dbManager.executeUpdate("INSERT INTO transports (route_id, type, departure_time, arrival_time, price) VALUES (1, 'Bus', '08:00', '12:00', 50.0)");
+
+            // Example: Querying data from the database
+            ResultSet resultSet = dbManager.executeQuery("SELECT * FROM routes");
+            while (resultSet.next()) {
+                System.out.println("Route ID: " + resultSet.getInt("id") +
+                        ", Start Point: " + resultSet.getString("start_point") +
+                        ", Destination: " + resultSet.getString("destination"));
+            }
+
+            dbManager.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
