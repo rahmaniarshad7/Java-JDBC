@@ -10,6 +10,7 @@ public class LinearSearch {
         } else {
             System.out.println("Element not found");
         }
+
     }
 
     private static int linearSearch(int[] arr, int target) {
