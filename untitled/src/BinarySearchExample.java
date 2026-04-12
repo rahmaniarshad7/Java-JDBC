@@ -29,5 +29,6 @@ public class BinarySearchExample {
         } else {
             System.out.println("Element not found");
         }
+
     }
 }
