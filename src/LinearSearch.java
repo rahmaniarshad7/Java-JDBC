@@ -9,8 +9,8 @@ public class LinearSearch {
             System.out.println("Element found at index: " + result);
         } else {
             System.out.println("Element not found");
+            System.out.println("Time complexity: O(n)");
         }
-
     }
 
     private static int linearSearch(int[] arr, int target) {
