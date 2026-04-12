@@ -9,7 +9,7 @@ public class MaximumInArray {
         System.out.println("Enter Size : ");
         int size = input.nextInt();
 
-        int arr[] = new int[size];
+        int[] arr = new int[size];
         System.out.println("Enter elements in Array : ");
 
         for(int i = 0; i < size; i++){
@@ -23,7 +23,7 @@ public class MaximumInArray {
                 max = arr[i];
             }
         }
-        System.out.println(STR."Max Value : \{max}");
+        System.out.println("Max Value : " + max);
 
     }
 }

@@ -1,7 +1,6 @@
 package com.beanClass;
 
-public class StudentBean
-{
+public class StudentBean {
     private int id;
     private int rollNo;
     private String name;
@@ -22,18 +21,20 @@ public class StudentBean
     public void setId(int id) {
         this.id = id;
     }
-    public void setCourseName(String bCa){
+
+    public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
-    public String getCourseName(){
+
+    public String getCourseName() {
         return courseName;
     }
-    public void setRollNo(int i){
+
+    public void setRollNo(int rollNo) {
         this.rollNo = rollNo;
     }
-    public int getRollNo()
-    {
+
+    public int getRollNo() {
         return rollNo;
     }
-
 }

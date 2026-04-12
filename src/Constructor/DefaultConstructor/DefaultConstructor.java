@@ -1,5 +1,7 @@
 package Constructor.DefaultConstructor;
 
+import static java.lang.StringTemplate.STR;
+
 public class DefaultConstructor {
 
     int bedrooms;
