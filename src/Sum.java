@@ -5,5 +5,6 @@ public class Sum {
         int sum = a + b;
 
         System.out.println("The sum of " + a + " and " + b + " is: " + sum);
+        System.out.println("Time complexity: O(1)");
     }
 }
