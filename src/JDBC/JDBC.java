@@ -23,7 +23,7 @@ public class JDBC {
             System.out.println("Connection Established Successfully");
 
             Statement statement = connection.createStatement();
-            String query = "select * from Student";
+            String query = "select * from Student where ID = 1";
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
                 int id = resultSet.getInt("ID");
