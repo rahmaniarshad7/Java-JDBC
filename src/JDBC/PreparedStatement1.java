@@ -53,6 +53,8 @@ public class PreparedStatement1 {
             } else {
                 System.out.println("Failed to Insert Record!!!");
             }
+            conn.close();
+            ps.close();
 
 
         } catch (SQLException e){
